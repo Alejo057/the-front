@@ -1,5 +1,7 @@
-.container {
-  padding: 0 2rem;
+@import './_variables.scss';
+
+#__next {
+  min-height: 100vh;
 }
 
 .main {
@@ -13,12 +15,13 @@
 }
 
 .footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+  -webkit-clip-path:polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+  clip-path:polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+  width:100%;
+  height: 50%;
+  background: $white;
+  position: absolute;
+  bottom: 0;
 }
 
 .footer a {
