@@ -1,0 +1,20 @@
+@import "variables";
+
+.languagesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: $space-md;
+
+  div:not(:last-child) {
+    margin-right: $space-md;
+  }
+
+  .language {
+    color: $gray-font;
+    font-family: "Mukta";
+    line-height: $line-height-link;
+    font-size: $font-size-md;
+    font-weight: $font-weight-base;
+    margin-left: $space-base;
+  }
+}

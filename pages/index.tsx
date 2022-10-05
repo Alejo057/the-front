@@ -9,11 +9,12 @@ import {useRouter} from "next/router";
 const Home: NextPage = () => {
     const {data: session} = useSession();
     const router = useRouter();
-    if (session) {
-        useEffect(() => {
+
+    useEffect(() => {
+        if (session) {
             router.push("/profile");
-        }, [])
-    }
+        }
+    }, []);
 
     return (
         <Fragment>

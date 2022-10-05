@@ -9,6 +9,7 @@ const options: any = {
         })
     ],
     callbacks: {
+        // @ts-ignore
         async jwt({ token, account }) {
             if (account) {
                 token.accessToken = account.access_token;
@@ -16,6 +17,7 @@ const options: any = {
             return token
         },
 
+        // @ts-ignore
         async session({ session, user, token }) {
             if (token) {
                 session.accessToken = token.accessToken

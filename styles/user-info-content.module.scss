@@ -1,0 +1,58 @@
+@import './variables';
+
+.userInfoContainer {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0 !important;
+
+  .userInfo {
+    display: flex;
+    padding: $space-sm * 2.5 $space-xl;
+
+    .avatarBox {
+      margin-right: $space-xs * 4.75;
+    }
+
+    .profileData {
+      .userName {
+        font-size: $font-size-md * 1.25;
+        line-height: $line-height-heading;
+      }
+
+      p {
+        font-size: $font-size-base * 1.75;
+        line-height: $line-height-content;
+        font-weight: $font-weight-base;
+      }
+
+      .userName,
+      p {
+        font-family: $font-family-global;
+        margin: 0;
+      }
+    }
+  }
+
+  .followBox {
+    border-top: 1px solid $border-gray;
+    display: flex;
+    justify-content: space-between;
+    padding: $space-base * 2.5 $space-xl;
+
+    div {
+      font-family: $font-family-global;
+      font-size: $font-size-md;
+      color: rgba(0, 0, 0, 0.6);
+      line-height: $line-height-link;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    border-radius: $space-base !important;
+  }
+
+  @media (min-width: $screen-lg) {
+    border: 1px solid $black !important;
+    margin: 0 $space-md;
+  }
+}

@@ -1,8 +1,15 @@
 $background-color: #FAFAFA;
 
+// Box shadow
+$basic-box-shadow: 0 9px 46px 8px rgba(8, 38, 47, 0.12);
 
 // Basic colors
 $white: #fff;
+$black: #000;
+$border-gray: #E0E0E0;
+$gray-font: #646E73;
+$light-gray-font: #E0E0E0;
+$black-footer: #212121;
 
 // Spacing
 $space-base: 0.5rem;                // 8px
@@ -26,6 +33,14 @@ $font-size-xxl: $space-xl * 2;          // 64px
 $font-weight-base: 400;
 $font-weight-semi: $font-weight-base * 0.25;
 $font-weight-bold: $font-weight-base * 0.5;
+
+// Font Family
+$font-family-global: 'Mukta';
+
+// Line height
+$line-height-heading: $font-size-xl;
+$line-height-content: $font-size-base * 2.5;
+$line-height-link: $font-size-xs * 6.25;
 
 // Breakpoints
 $screen-sm: 575.98px;

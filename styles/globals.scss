@@ -17,3 +17,16 @@ a {
 * {
   box-sizing: border-box;
 }
+
+#__next {
+  position: relative;
+}
+
+@media (min-width: $screen-lg) {
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    margin: $space-lg auto 0 auto;
+    width: fit-content;
+  }
+}
