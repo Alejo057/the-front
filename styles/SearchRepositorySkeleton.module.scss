@@ -1,0 +1,21 @@
+@import "variables";
+
+.title {
+  margin: $space-base * 6.25 $space-xs*4.75 0 $space-xs*4.75;
+}
+
+.repositoryListContainer {
+  display: flex;
+  flex-wrap: wrap;
+
+  .repository {
+    flex: 0 0 calc(100% - #{$space-xs * 9.5});
+    height: 124px;
+    margin: 0 $space-xs*4.75;
+    padding: $font-size-xl;
+
+    @media (min-width: $screen-xl) {
+      flex: 0 0 calc(33% - #{$space-xs * 9.5});
+    }
+  }
+}

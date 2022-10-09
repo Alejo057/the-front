@@ -2,16 +2,12 @@
 
 .repositoryListContainer {
   background-color: $white;
+  flex: 0 0 70%;
   padding-top: $space-md;
   padding-bottom: 500px;
-  flex: 0 0 70%;
 
-  .repositoryListTitle {
-    font-family: 'Mukta';
-    font-size: $font-size-xs * 5;
-    font-weight: $font-weight-base;
-    line-height: $font-size-xl;
-    margin: 0 $space-xs * 4.75;
+  &.lessPadding {
+    padding-bottom: 50px;
   }
 
   .cardListContainer {
@@ -39,14 +35,18 @@
         .repositoryVisibility {
           color: $gray-font;
           font-family: "Mukta";
-          line-height: $line-height-content;
           font-size: $font-size-base * 1.75;
           font-weight: $font-weight-base;
+          line-height: $line-height-content;
         }
       }
 
       @media (min-width: $screen-md) {
         flex: 0 0 calc(50% - #{$space-xs * 9.5});
+
+        &.fullScreenContent {
+          flex: 0 0 calc(33.333% - #{$space-xs * 9.5});
+        }
       }
     }
   }

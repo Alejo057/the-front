@@ -31,3 +31,7 @@ export const repositoryMapper = (repositoryEntity: RepositoryEntity) => {
     );
     return mapper.map(repositoryEntity, RepositoryEntity, RepositoryDto);
 }
+
+export const uniqueKeyGenerator = () => {
+    return '_' + Math.random().toString(36).substr(2, 9);
+}

@@ -1,0 +1,47 @@
+@import "variables";
+
+.searchRepositoryPageContainer {
+  background-color: $white;
+}
+
+.searchRepositoryPage {
+  padding: 26px 14px 26px 10px;
+
+  .title {
+    text-align: center;
+    font-family: 'Mukta';
+    font-size: $font-size-xl;
+    font-weight: $font-weight-base;
+    line-height: $line-height-title-mobile;
+    margin-bottom: 25px;
+    margin-top: 0;
+
+    span {
+      color: $green-blue;
+    }
+  }
+
+  .resultsTitle {
+    font-family: 'Mukta';
+    font-size: $font-size-xs * 5;
+    font-weight: $font-weight-base;
+    line-height: $font-size-xl;
+    margin-top: $space-xl;
+    margin-left: 19px;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 50px 109px 50px 127px;
+
+    .title {
+      font-size: $font-size-title-xl;
+      line-height: $line-height-title;
+      margin-bottom: 50px;
+    }
+  }
+}

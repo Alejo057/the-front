@@ -1,7 +1,7 @@
 import styles from '../styles/Footer.module.scss';
 
-const Footer = () => {
-    return <footer className={styles.footer}>
+const Footer = (props) => {
+    return <footer className={styles.footer.concat(props.absolute ? " ".concat(styles.absolute) : "")}>
         <div className={styles.linksContainer}>
             <ul>
                 <li className={styles.category}><a href="#">SERVICES</a></li>

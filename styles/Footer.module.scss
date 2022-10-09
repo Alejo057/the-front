@@ -2,32 +2,35 @@
 
 .footer {
   -webkit-clip-path:polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-  clip-path:polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-  width:100%;
-  min-height: 540px;
   background: $black-footer;
-  position: absolute;
-  bottom: 0;
+  clip-path:polygon(0 10%, 100% 0, 100% 100%, 0 100%);
   display: flex;
   justify-content: center;
+  min-height: 540px;
+  width:100%;
+
+  &.absolute {
+    position: absolute;
+    bottom: 0;
+  }
 
   .linksContainer {
-    margin: auto;
     color: $light-gray-font;
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
 
     ul {
       list-style: none;
       padding: 0 $space-md;
 
       li {
+        line-height: $line-height-content;
+        margin-bottom: $space-md;
         font-family: $font-family-global;
         font-size: $font-size-xs * 3.5;
         font-weight: $font-weight-base;
-        line-height: $line-height-content;
-        margin-bottom: $space-md;
 
         &.category {
           font-size: $font-size-md * 1.25;

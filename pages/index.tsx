@@ -2,9 +2,10 @@ import type {NextPage} from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import {getSession, GetSessionParams, useSession} from "next-auth/react";
-import {Fragment, useEffect} from "react";
+import {Fragment, useEffect, useTransition} from "react";
 import Login from "../components/Login";
 import {useRouter} from "next/router";
+import useTranslation from "next-translate/useTranslation";
 
 const Home: NextPage = () => {
     const {data: session} = useSession();

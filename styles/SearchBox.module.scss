@@ -1,0 +1,40 @@
+@import "variables";
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 35px 36px 26px 38px;
+
+  .searchBox {
+    flex: 0 0 100%;
+    margin-bottom: $space-md;
+  }
+
+  .searchButton {
+    flex: 0 0 100%;
+
+    Button {
+      width: 100%;
+      height: $space-md * 3.5;
+    }
+  }
+
+  @media (min-width: $screen-xl){
+    flex-direction: row;
+    padding: 35px 18px 42px 38px;
+
+    .searchBox {
+      flex: 0 0 calc(100% - #{$font-size-base * 25.25});
+      margin-right: $font-size-lg;
+      margin-bottom: 0;
+    }
+
+    .searchButton {
+      flex: 0 0 178px;
+
+      Button {
+        height: 100%;
+      }
+    }
+  }
+}

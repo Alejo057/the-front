@@ -1,0 +1,9 @@
+@import "variables";
+
+.repositoryListTitle {
+  font-family: 'Mukta';
+  font-size: $font-size-xs * 5;
+  font-weight: $font-weight-base;
+  line-height: $font-size-xl;
+  margin: 0 $space-xs * 4.75;
+}

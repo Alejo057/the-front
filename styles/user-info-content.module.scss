@@ -1,9 +1,9 @@
 @import './variables';
 
 .userInfoContainer {
+  border-bottom: 0 !important;
   display: flex;
   flex-direction: column;
-  border-bottom: 0 !important;
 
   .userInfo {
     display: flex;
@@ -21,8 +21,8 @@
 
       p {
         font-size: $font-size-base * 1.75;
-        line-height: $line-height-content;
         font-weight: $font-weight-base;
+        line-height: $line-height-content;
       }
 
       .userName,
@@ -40,9 +40,9 @@
     padding: $space-base * 2.5 $space-xl;
 
     div {
+      color: rgba(0, 0, 0, 0.6);
       font-family: $font-family-global;
       font-size: $font-size-md;
-      color: rgba(0, 0, 0, 0.6);
       line-height: $line-height-link;
     }
   }

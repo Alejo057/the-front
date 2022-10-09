@@ -1,7 +1,8 @@
 import styles from "../styles/Header.module.scss"
 import {Avatar} from "@mui/material";
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {signOut} from "next-auth/react";
+import Link from "next/link"
 
 // @ts-ignore
 const Header = (props) => {
@@ -18,14 +19,16 @@ const Header = (props) => {
     return <header className={styles.header}>
         <span className={styles.pageLogo}></span>
         <span className={styles.hamburgerIcon} onClick={toggleMenu}></span>
-        <ul className={styles.headerLinksList.concat(showMenu ? ' '.concat(styles.shown) : '')} >
+        <ul className={styles.headerLinksList.concat(showMenu ? ' '.concat(styles.shown) : '')}>
             <li><span className={styles.closeIcon} onClick={toggleMenu}></span></li>
             <li><a href="#">Search User</a></li>
-            <li><a href="#">Search Repositories</a></li>
+            <li><Link href="/search/repository"><a>Search Repositories</a></Link></li>
             <li className={styles.avatarContainer}>
                 <Avatar src={props.avatar} onClick={triggerShowSignOut}/>
                 {showSignOutButton &&
-                    <div className={styles.signOutButton}><button onClick={() => signOut()}>Sign out</button></div>}
+                    <div className={styles.signOutButton}>
+                        <button onClick={() => signOut()}>Sign out</button>
+                    </div>}
             </li>
         </ul>
     </header>
