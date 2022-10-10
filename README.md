@@ -1,5 +1,26 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+This app use **[NextJS](https://nextjs.org/)**, **[NextAuth](https://next-auth.js.org/)** for authentication,
+**[Recoil](https://recoiljs.org/)** for managing states, **[Axios](https://axios-http.com/docs/intro)** for 
+the http requests and **[MUI](https://mui.com/)** for styled out of the box components.
+
+I have added custom styles for MUI components and skeleton design for search repository loading
+
+***Login Page***
+![img.png](README_Evidences/img.png)
+
+***Profile Page***
+![img_1.png](README_Evidences/img_1.png)
+
+![img_2.png](README_Evidences/img_2.png)
+
+***Search Repository Page***
+![img_3.png](README_Evidences/img_3.png)
+
+![img_4.png](README_Evidences/img_4.png)
+![img_5.png](README_Evidences/img_5.png)
+![img_6.png](README_Evidences/img_6.png)
+![img_7.png](README_Evidences/img_7.png)
 ## Getting Started
 
 First, run the development server:

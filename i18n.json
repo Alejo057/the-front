@@ -4,6 +4,6 @@
     "pages": {
         "/": ["home"],
         "/profile": ["profile", "header", "footer"],
-        "/search/repository": ["search-repository"]
+        "/search/repository": ["search-repository", "header", "footer"]
     }
 }
