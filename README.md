@@ -7,21 +7,21 @@ the http requests and **[MUI](https://mui.com/)** for styled out of the box comp
 I have added custom styles for MUI components and skeleton design for search repository loading
 
 ***Login Page***
-![img.png](README_Evidences/img.png)
+![img.png](public/img.png)
 
 ***Profile Page***
-![img_1.png](README_Evidences/img_1.png)
+![img_1.png](public/img_1.png)
 
-![img_2.png](README_Evidences/img_2.png)
+![img_2.png](public/img_2.png)
 
 ***Search Repository Page***
 
-![img_3.png](README_Evidences/img_3.png)
+![img_3.png](public/img_3.png)
 
-![img_4.png](README_Evidences/img_4.png)
-![img_5.png](README_Evidences/img_5.png)
-![img_6.png](README_Evidences/img_6.png)
-![img_7.png](README_Evidences/img_7.png)
+![img_4.png](public/img_4.png)
+![img_5.png](public/img_5.png)
+![img_6.png](public/img_6.png)
+![img_7.png](public/img_7.png)
 ## Getting Started
 
 First, run the development server:
