@@ -15,6 +15,7 @@ I have added custom styles for MUI components and skeleton design for search rep
 ![img_2.png](README_Evidences/img_2.png)
 
 ***Search Repository Page***
+
 ![img_3.png](README_Evidences/img_3.png)
 
 ![img_4.png](README_Evidences/img_4.png)
