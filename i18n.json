@@ -2,6 +2,8 @@
     "locales": ["en"],
     "defaultLocale": "en",
     "pages": {
-        "/": ["home"]
+        "/": ["home"],
+        "/profile": ["profile", "header", "footer"],
+        "/search/repository": ["search-repository"]
     }
 }

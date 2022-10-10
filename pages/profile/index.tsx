@@ -12,12 +12,14 @@ import styles from "../../styles/Profile.module.scss";
 import {useRecoilState} from "recoil";
 import userState from "../../recoil/user/atom";
 import {getContent} from "../../helper/api";
+import useTranslation from "next-translate/useTranslation";
 
 const Profile: NextPage = () => {
     const {data: session} = useSession();
     const router = useRouter();
     const [user, setUser] = useRecoilState(userState);
-    const [repositoryList, setRepositoryList] = useState<RepositoryDto[]>([])
+    const [repositoryList, setRepositoryList] = useState<RepositoryDto[]>([]);
+    const { t } = useTranslation('profile');
 
     useEffect(() => {
         if (session) {
@@ -57,7 +59,7 @@ const Profile: NextPage = () => {
                         <UserInfoContent user={user}/>
                     </div>
                     <RepositoryList list={repositoryList}>
-                        <h3 className={styles.repositoryListTitle}>Repositories</h3>
+                        <h3 className={styles.repositoryListTitle}>{t('repositoriesTitle')}</h3>
                     </RepositoryList>
                 </div>
                 <Footer absolute={true}/>

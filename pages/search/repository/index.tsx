@@ -15,6 +15,7 @@ import {useRecoilState} from "recoil";
 import userState from "../../../recoil/user/atom";
 import {getContent} from "../../../helper/api";
 import {useRouter} from "next/router";
+import useTranslation from "next-translate/useTranslation";
 
 const SearchRepository: NextPage = () => {
     const {data: session} = useSession();
@@ -25,6 +26,7 @@ const SearchRepository: NextPage = () => {
     const [loading, setLoading] = useState(false);
     const [user, _] = useRecoilState(userState);
     const router = useRouter();
+    const { t } = useTranslation('search-repository');
 
     useEffect(() => {
         if (!session) {
@@ -70,13 +72,13 @@ const SearchRepository: NextPage = () => {
         <Header avatar={user.avatarUrl}/>
 
         <main className={styles.searchRepositoryPage}>
-            <h1 className={styles.title}>Search <span>Repositories</span></h1>
+            <h1 className={styles.title}>{t('search')} <span>{t('repositories')}</span></h1>
             <SearchBox  onSearchContentSubmit={searchContent}/>
 
             {loading && <SearchRepositorySkeleton />}
 
             {repositoryList.length > 0 && <RepositoryList list={repositoryList} isFullScreen={true}>
-                <h3 className={styles.resultsTitle}>Results</h3>
+                <h3 className={styles.resultsTitle}>{t('results')}</h3>
             </RepositoryList>}
             {repositoryList.length > 0 && <ThemeProvider theme={customTheme}>
                 <Pagination className={styles.pagination} count={pageNumber} page={currentPage} color="primary" onChange={handleChangePage}/>

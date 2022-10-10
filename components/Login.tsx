@@ -3,14 +3,17 @@ import {Card} from "@mui/material";
 import {signIn} from "next-auth/react";
 import styles from "../styles/login.module.scss"
 import ButtonBasic from "./ButtonBasic";
+import useTranslation from "next-translate/useTranslation";
 
 const login = function () {
-    console.log(styles)
+    const { t } = useTranslation("home");
+
     return (
         <Card variant="outlined" className={styles.container}>
             <GitHubIcon sx={{fontSize: 87}} className={styles.loginIcon}/>
-            <div className={styles.loginMessage}>Log in to your account</div>
-            <ButtonBasic action={() => signIn('github')}>Sign in with github</ButtonBasic>
+            <div className={styles.loginMessage}>{t('loginText')}</div>
+             {/*@ts-ignore*/}
+            <ButtonBasic action={() => signIn('github')}>{t('buttonText')}</ButtonBasic>
         </Card>
     )
 }

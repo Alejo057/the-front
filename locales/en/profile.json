@@ -1,1 +1,6 @@
-{}
+{
+  "followers_one" : "{{count}} follower",
+  "followers_other" : "{{count}} followers",
+  "following" : "{{count}} following",
+  "repositoriesTitle" : "Repositories"
+}

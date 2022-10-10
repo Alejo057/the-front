@@ -3,6 +3,7 @@ import {Avatar} from "@mui/material";
 import React, {useState} from "react";
 import {signOut} from "next-auth/react";
 import Link from "next/link"
+import useTranslation from "next-translate/useTranslation";
 
 // @ts-ignore
 const Header = (props) => {
@@ -11,6 +12,7 @@ const Header = (props) => {
     const toggleMenu = () => {
         setShowMenu(!showMenu);
     }
+    const { t } = useTranslation('header')
 
     const triggerShowSignOut = () => {
         setShowSignOutButton(!showSignOutButton);
@@ -21,8 +23,8 @@ const Header = (props) => {
         <span className={styles.hamburgerIcon} onClick={toggleMenu}></span>
         <ul className={styles.headerLinksList.concat(showMenu ? ' '.concat(styles.shown) : '')}>
             <li><span className={styles.closeIcon} onClick={toggleMenu}></span></li>
-            <li><a href="#">Search User</a></li>
-            <li><Link href="/search/repository"><a>Search Repositories</a></Link></li>
+            <li><a href="#">{t('searchUser')}</a></li>
+            <li><Link href="/search/repository"><a>{t('searchRepositories')}</a></Link></li>
             <li className={styles.avatarContainer}>
                 <Avatar src={props.avatar} onClick={triggerShowSignOut}/>
                 {showSignOutButton &&
